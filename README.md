@@ -30,6 +30,10 @@ class Carro {
     private modelo: string
     private numeroDePortas: number
     private velocidade: number = 0
+    
+    constructor() {
+        
+    }
 
     public acelerar(): void {
         this.velocidade += 10
@@ -44,5 +48,40 @@ class Carro {
     }
 }
 ```
+
+* Constructor  
+Mesmo que não esteja implicitamente escrito na classe o interpretador procura por ele, se não acha simplesmente ignora.
+O constructor é responsável por receber os parâmetros enviados no momento de instanciação da classe
+
+* Interface  
+* O que é ?  
+Funcionam como contratos. Definem métodos e atributos que devem ser implementados nas classes.
+
+* Criando Interface
+```js
+export interface IConcessionaria {
+    fornecerHorariosDeFuncionamento(): string
+}
+```
+
+* Generics  
+* O que é ?  
+Permite que componentes, classes ou métodos sejam reutilizáveis.  
+
+* Exemplo:  
+```js
+export interface IAdd<Type> {
+    add(object: T): boolean
+}
+
+import { IAdd } from './IAdd'
+
+export class Add<T> implements IAdd<T> {
+    add(object: T): boolean {
+        return 'Adicionado com sucesso.'
+    }
+}
+```
+
 
 
