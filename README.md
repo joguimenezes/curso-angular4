@@ -83,5 +83,10 @@ export class Add<T> implements IAdd<T> {
 }
 ```
 
+* Observable  
+Fica constantemente verificando alterações nos parâmetros das rotas. 
 
+* Subscribe  
+* O que é ?  
+Fica analisando alterações
 
